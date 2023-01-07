@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" stylesheets="@../css/css.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.root.medecinController">
+
+   <children>
+      <HBox layoutX="2.0" prefHeight="543.0" prefWidth="862.0" styleClass="container-2">
+         <children>
+            <Pane prefHeight="543.0" prefWidth="507.0">
+               <children>
+                  <Pane layoutX="33.0" layoutY="50.0" prefHeight="218.0" prefWidth="433.0" styleClass="btn">
+                     <children>
+                        <ComboBox fx:id="cboSecretaire" layoutX="211.0" layoutY="139.0" prefHeight="27.0" prefWidth="161.0" />
+                        <Button layoutX="372.0" layoutY="139.0" mnemonicParsing="false" onAction="#handleAddSecretaire" prefHeight="27.0" prefWidth="45.0" styleClass="bg-success" text="+" textFill="WHITE" />
+                        <Button layoutX="152.0" layoutY="139.0" mnemonicParsing="false" onAction="#handleremoveSecretaire" prefHeight="27.0" prefWidth="45.0" styleClass="bg-danger" text="-">
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="WHITE" />
+                                    <Stop color="WHITE" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Button>
+                        <TextField fx:id="txtSecretaire" editable="false" layoutX="21.0" layoutY="139.0" prefHeight="27.0" prefWidth="132.0" />
+                     </children>
+                  </Pane>
+                  <Button layoutX="28.0" layoutY="504.0" mnemonicParsing="false" onAction="#handleAddMedecin" prefHeight="28.0" prefWidth="130.0" styleClass="bg-success" text="Ajouter" textFill="WHITE" />
+                  <TextField fx:id="txtNom" layoutX="53.0" layoutY="91.0" prefHeight="27.0" prefWidth="397.0" />
+                  <Label layoutX="53.0" layoutY="74.0" text="Nom" />
+                  <Label layoutX="54.0" layoutY="123.0" text="Prenom" />
+                  <TextField fx:id="txtPrenom" layoutX="54.0" layoutY="140.0" prefHeight="27.0" prefWidth="397.0" />
+                  <Label layoutX="54.0" layoutY="171.0" text="Secretaire" />
+                  <Button layoutX="180.0" layoutY="503.0" mnemonicParsing="false" onAction="#handleUpdateMedecin" prefHeight="28.0" prefWidth="130.0" styleClass="bg-warning" text="Modifier" />
+                  <Button layoutX="331.0" layoutY="503.0" mnemonicParsing="false" onAction="#handleDeleteMedecin" prefHeight="28.0" prefWidth="130.0" styleClass="bg-danger" text="Supprimer" textFill="WHITE" />
+                  <Pane fx:id="specialityPane" layoutX="85.0" layoutY="273.0" prefHeight="217.0" prefWidth="329.0" styleClass="btn">
+                     <children>
+                        <Label layoutX="17.0" layoutY="3.0" text="Specialisation" />
+                        <ComboBox fx:id="cboSpecialisations" layoutX="17.0" layoutY="20.0" prefHeight="27.0" prefWidth="197.0" />
+                        <Button layoutX="219.0" layoutY="20.0" mnemonicParsing="false" onAction="#handleAddSpecialisation" prefHeight="27.0" prefWidth="45.0" styleClass="bg-success" text="+" textFill="WHITE" />
+                        <Button fx:id="btnRemoveSpe" layoutX="270.0" layoutY="20.0" mnemonicParsing="false" onAction="#handleRemoveSpecialisation" prefHeight="27.0" prefWidth="45.0" styleClass="bg-danger" text="-">
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="WHITE" />
+                                    <Stop color="WHITE" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill></Button>
+                        <TableView fx:id="tblvSpecialisation" layoutX="16.0" layoutY="51.0" onMouseClicked="#handleSelectSpe" prefHeight="155.0" prefWidth="300.0" styleClass="btn">
+                          <columns>
+                            <TableColumn prefWidth="51.819549560546875" text="#" />
+                            <TableColumn fx:id="tblcLibelle" prefWidth="246.18043518066406" text="Specialisaton" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="56.0" layoutY="217.0" text="Email" textFill="#0851d1">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtLogin" layoutX="55.0" layoutY="233.0" prefHeight="27.0" prefWidth="174.0" />
+                  <Label layoutX="245.0" layoutY="218.0" text="Mot de Passe" textFill="#0851d1">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="txtPassword" layoutX="246.0" layoutY="233.0" prefHeight="27.0" prefWidth="204.0" />
+               </children>
+            </Pane>
+            <Pane prefHeight="543.0" prefWidth="423.0">
+               <children>
+                  <TableView fx:id="tblvMedecin" layoutX="10.0" layoutY="34.0" onMouseClicked="#handleSelectRdv" prefHeight="480.0" prefWidth="368.0" styleClass="btn">
+                    <columns>
+                        <TableColumn fx:id="tblcCode" prefWidth="86.23727416992188" text="Code" />
+                      <TableColumn fx:id="tblcNom" prefWidth="129.6171875" text="nom" />
+                        <TableColumn fx:id="tblcPrenom" minWidth="0.0" prefWidth="151.3828125" text="prenom" />
+                    </columns>
+                  </TableView>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

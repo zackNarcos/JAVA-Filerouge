@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="621.0" prefWidth="1058.0" stylesheets="@../css/css.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.patient.PatientController">
+   <children>
+      <HBox layoutY="185.0" prefHeight="100.0" prefWidth="450.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <VBox prefHeight="623.0" prefWidth="206.0" styleClass="linear-primary">
+                     <children>
+                        <Label text="Rendez-Vous">
+                           <VBox.margin>
+                              <Insets top="90.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnShowRdv" mnemonicParsing="false" onAction="#HandleLoadViewShowRdv" prefHeight="36.0" prefWidth="205.0" styleClass="btn-nav" text="Afficher">
+                           <VBox.margin>
+                              <Insets bottom="2.0" top="1.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="btnNewRdv" mnemonicParsing="false" onAction="#HandleLoadViewNewRdv" prefHeight="36.0" prefWidth="205.0" styleClass="btn-nav" text="Nouveau" textFill="WHITE" />
+                        <Label text="Consultation">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="3.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Button fx:id="btnShowConsultation" mnemonicParsing="false" onAction="#HandleLoadViewShowConsultation" prefHeight="36.0" prefWidth="205.0" styleClass="btn-nav" text="Afficher" />
+                        <Label text="Prestation ">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnShowPrestation" mnemonicParsing="false" onAction="#HandleLoadViewShowPrestation" prefHeight="36.0" prefWidth="205.0" styleClass="btn-nav" text="Afficher">
+                           <VBox.margin>
+                              <Insets bottom="2.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#HandleLogOut" prefHeight="37.0" prefWidth="205.0" styleClass="btn-login" text="Deconnexion" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets top="23.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children></VBox>
+               </children>
+            </Pane>
+            <VBox prefHeight="621.0" prefWidth="859.0">
+               <children>
+                  <Pane prefHeight="82.0" prefWidth="843.0" styleClass="primary">
+                     <VBox.margin>
+                        <Insets left="6.0" />
+                     </VBox.margin>
+                     <children>
+                        <Text fill="WHITE" layoutX="35.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Space">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#08c61e" layoutX="106.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HEALT">
+                           <font>
+                              <Font size="32.0" />
+                           </font>
+                        </Text>
+                        <Text fill="WHITE" layoutX="594.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenue,  ">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="txtShowNameUserOnline" fill="#08c61e" layoutX="680.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zackarie" wrappingWidth="172.75">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+                  <AnchorPane fx:id="anchorContainer" prefHeight="540.0" prefWidth="859.0" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

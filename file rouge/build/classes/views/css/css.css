@@ -1,0 +1,82 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 10 nov. 2021, 08:54:21
+    Author     : zackarieabessoloekouma
+*/
+
+
+.bg-success{
+    -fx-background-color: green;
+}
+
+.bg-danger{
+    -fx-background-color: red;
+}
+
+.bg-warning{
+    -fx-background-color: yellow;
+}
+
+.container{
+    -fx-background-image: url("../image/screen-8.jpeg");
+    -fx-background-size: cover;
+}
+
+.container-2{
+    -fx-background-image: url("../image/Blue-style-mountains-lake-clear-water-water-reflection-snow-dusk_2560x1600.jpeg");
+    -fx-background-size: cover;
+}
+
+.bg-primary{
+    -fx-background-color: rgba(51,153,255,0.1);
+    -fx-background-radius: 15px;
+}
+
+.text-primary{
+    -fx-text-fill: #0851d1;
+}
+.linear-primary{
+    -fx-background-color: linear-gradient(#0851d1, #073789, #021d49);
+    
+}
+
+.primary{
+    -fx-background-color: #0851d1;
+    
+}
+
+.btn{
+    -fx-background-radius: 10px;
+    -fx-background-size: cover;
+    -fx-background-color: linear-gradient(#0851d1, #073789, #021d49);
+    -fx-text-fill: white;
+}
+
+.comboBox{
+    
+    -fx-background-radius: 10px;
+    /*-fx-background-color: linear-gradient(white);*/
+}
+
+.btn-nav{
+    
+    -fx-background-size: cover;
+    -fx-background-color: #0851d1;
+    /*-fx-background-image: url("../image/screen-8.jpeg");*/
+    -fx-text-fill: white;
+}
+
+.label{
+
+    -fx-text-fill: #08c61e;
+}
+
+.btn-login{
+    -fx-background-image: url("../image/screen-8.jpeg");
+    -fx-background-size: cover;
+    -fx-text-fill: white;
+}

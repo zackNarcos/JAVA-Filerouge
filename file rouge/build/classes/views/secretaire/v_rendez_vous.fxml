@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" prefHeight="540.0" prefWidth="853.0" stylesheets="@../css/css.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.secretaire.RendezVousController">
+   <children>
+      <TableView fx:id="tbleRdv" layoutX="453.0" layoutY="31.0" onMouseClicked="#handleSelectRdv" prefHeight="499.0" prefWidth="402.0" styleClass="btn">
+         <columns>
+            <TableColumn fx:id="tblcDate" prefWidth="103.0" text="Date" />
+            <TableColumn fx:id="tblcType" prefWidth="154.0" text="Type" />
+            <TableColumn fx:id="tblcId" prefWidth="136.0" text="Id Patient" />
+         </columns>
+      </TableView>
+      <Pane layoutX="38.0" layoutY="119.0" prefHeight="324.0" prefWidth="402.0" styleClass="btn">
+         <children>
+            <Label layoutX="27.0" layoutY="29.0" prefHeight="17.0" prefWidth="56.0" text="Date" />
+            <Label layoutX="218.0" layoutY="28.0" prefHeight="17.0" prefWidth="87.0" text="Code Patient" />
+            <TextField fx:id="txtCode" layoutX="218.0" layoutY="54.0" />
+            <Label layoutX="27.0" layoutY="101.0" prefHeight="17.0" prefWidth="87.0" text="Nom Patient" />
+            <TextField fx:id="txtNom" layoutX="27.0" layoutY="127.0" prefHeight="27.0" prefWidth="353.0" />
+            <Label layoutX="27.0" layoutY="173.0" prefHeight="17.0" prefWidth="56.0" text="Type" />
+            <TextField fx:id="txtType" layoutX="27.0" layoutY="198.0" onMouseClicked="#handleSelectRdv" />
+            <Label layoutX="218.0" layoutY="172.0" prefHeight="17.0" prefWidth="56.0" text="Statut" />
+            <TextField fx:id="txtStatut" layoutX="218.0" layoutY="197.0" />
+            <Button layoutX="123.0" layoutY="249.0" mnemonicParsing="false" onAction="#handleValiderRdv" prefHeight="27.0" prefWidth="149.0" styleClass="bg-success" text="valider" />
+            <DatePicker fx:id="txtDate" layoutX="27.0" layoutY="54.0" prefHeight="27.0" prefWidth="173.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
